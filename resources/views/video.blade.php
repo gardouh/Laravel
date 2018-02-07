@@ -4,7 +4,7 @@
     <title></title>
 </head>
 <body>
-
+<center>
 <video id="Video1" width="320" height="240" >
     //  Replace these with your own video files.
     <source src="movie.mp4" type="video/mp4" />
@@ -19,7 +19,7 @@
     <button id="play" onclick="vidplay()">&gt;</button>
     <button id="fastFwd" onclick="skip(10)">&gt;&gt;</button>
 </div>
-
+</center>
 </body>
 <script type="text/javascript">
 
