@@ -20,3 +20,5 @@ Route::get('/video', function () {
 });
 
 Route::get('/add','Video_controller@insert');
+Route::get('/pause','Video_controller@pause');
+Route::get('/calculdiff','Video_controller@caculDiff');

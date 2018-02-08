@@ -7,6 +7,8 @@ function vidplay() {
         button.textContent = "||";
     } else {
         video.pause();
+        pause();
+        diff();
         button.textContent = ">";
     }
 }
