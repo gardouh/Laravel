@@ -3,6 +3,7 @@
 <head>
     <title></title>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <body>
 <center>
 <video id="Video1" width="320" height="240" >
@@ -16,11 +17,19 @@
 <div id="buttonbar">
     <button id="restart" onclick="restart();">[]</button>
     <button id="rew" onclick="skip(-10)">&lt;&lt;</button>
-    <button id="play" onclick="vidplay()">&gt;</button>
+    <button id="play" onclick="vidplay();">&gt;</button>
     <button id="fastFwd" onclick="skip(10)">&gt;&gt;</button>
 </div>
 </center>
+
+<div id="aaa"></div>
 </body>
+<script>
+    function goToURL() {
+        location.href = '/add';
+
+    }
+</script>
 <script type="text/javascript">
 
     function vidplay() {
@@ -28,6 +37,7 @@
         var button = document.getElementById("play");
         if (video.paused) {
             video.play();
+            add();
             button.textContent = "||";
         } else {
             video.pause();
@@ -44,6 +54,17 @@
         var video = document.getElementById("Video1");
         video.currentTime += value;
     }
+</script>
+
+
+
+<script>
+    function add() {
+        $("#aaa").html('<object data="/add">');
+
+    }
+
+
 </script>
 
 </html>
